@@ -1,3 +1,4 @@
+from dotenv import dotenv_values
 from apikey import OPENAI_API_KEY
 from langchain.vectorstores import Chroma
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
@@ -11,7 +12,8 @@ import os
 print("UTIL LOADED!")
 
 
-os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
+config = dotenv_values(".env")
+os.environ['OPENAI_API_KEY'] = config["OPENAI_API_KEY"]
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False

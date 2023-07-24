@@ -1,20 +1,20 @@
-import openai
-from langchain.chains import ConversationalRetrievalChain, RetrievalQA
-from langchain.chat_models import ChatOpenAI
-from langchain.document_loaders import DirectoryLoader, TextLoader
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.indexes import VectorstoreIndexCreator
-from langchain.indexes.vectorstore import VectorStoreIndexWrapper
-from langchain.llms import OpenAI
-from langchain.vectorstores import Chroma
-import streamlit as st
-from PIL import Image
-from streamlit_chat import message
-from utils import chain, index, chat_history
-from apikey import OPENAI_API_KEY
-import os
 
-os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
+from utils import chain, index, chat_history
+from PIL import Image
+import streamlit as st
+from langchain.vectorstores import Chroma
+from langchain.llms import OpenAI
+from langchain.indexes.vectorstore import VectorStoreIndexWrapper
+from langchain.indexes import VectorstoreIndexCreator
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.document_loaders import DirectoryLoader, TextLoader
+from langchain.chat_models import ChatOpenAI
+from langchain.chains import ConversationalRetrievalChain, RetrievalQA
+import os
+import openai
+from streamlit_chat import message
+
+
 st.subheader("Chatbot Based On Personalized Data using LLMs")
 
 

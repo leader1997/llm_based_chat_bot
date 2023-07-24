@@ -9,9 +9,6 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.vectorstores import Chroma
 
-from apikey import OPENAI_API_KEY
-
-os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
