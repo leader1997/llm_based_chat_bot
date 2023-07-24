@@ -1,6 +1,5 @@
 
 from utils import chain, index, chat_history
-from PIL import Image
 import streamlit as st
 from langchain.vectorstores import Chroma
 from langchain.llms import OpenAI
@@ -11,7 +10,7 @@ from langchain.document_loaders import DirectoryLoader, TextLoader
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain, RetrievalQA
 import os
-import openai
+
 from streamlit_chat import message
 
 
