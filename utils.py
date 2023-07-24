@@ -1,5 +1,4 @@
-from dotenv import dotenv_values
-from apikey import OPENAI_API_KEY
+
 from langchain.vectorstores import Chroma
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.indexes import VectorstoreIndexCreator
@@ -7,8 +6,10 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.document_loaders import DirectoryLoader
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
+from dotenv import dotenv_values
 import sys
 import os
+
 print("UTIL LOADED!")
 
 

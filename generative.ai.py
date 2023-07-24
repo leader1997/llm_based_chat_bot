@@ -9,8 +9,6 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.vectorstores import Chroma
 
-
-# Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
 
 query = None
