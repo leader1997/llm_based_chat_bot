@@ -6,15 +6,14 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.document_loaders import DirectoryLoader
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
-from dotenv import dotenv_values
 import sys
 import os
 
+import streamlit as st
+
 print("UTIL LOADED!")
 
-
-config = dotenv_values(".env")
-os.environ['OPENAI_API_KEY'] = config["OPENAI_API_KEY"]
+os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
